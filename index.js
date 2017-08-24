@@ -52,22 +52,42 @@ function number() {
   bot.on('message', function(event) {
     if (event.message.type = 'text') {
       var msg = event.message.text;
-      var replyMsg = '+ '+msg+'：\n'+'https://www.taiwanfundexchange.com.tw/TFEFrontend/qa?queryText='+ msg;
-      if (msg.indexOf('1\r') != -1) {
-          replyMsg = 'dfafsdfsdfsa';
-        if (replyMsg == '') {
-          replyMsg = 'Morning! How can I help u? (cony kiss)\n參加前注意事項 => 1\n加入競標組合 => 2\n\nThanks, have a good day! (halloween)';
-        }
-      }
-      if (replyMsg == '') {
-        replyMsg = 'Morning! How can I help u? (cony kiss)\n如何加入會員 => 1\n如何加入加入 => 2\n\nThanks, have a good day! (halloween)';
-      }
+      var replyMsg = '';
 
-      event.reply(replyMsg).then(function(data) {
-        console.log(replyMsg);
-      }).catch(function(error) {
-        console.log('error');
-      });
+      var request = new XMLHttpRequest();
+      request.open('POST', 'https://www.taiwanfundexchange.com.tw/TFEFrontend/qaQuery', true);
+      request.onload = function(msg) {
+        if (request.status >= 200 && request.status < 400) {
+          // Success!
+          var resp = request.responseText;
+          console.log(resp);
+          // if (msg.indexOf('1\r') != -1) {
+          //     replyMsg = 'dfafsdfsdfsa';
+          //   if (replyMsg == '') {
+          //     replyMsg = 'Morning! How can I help u? (cony kiss)\n參加前注意事項 => 1\n加入競標組合 => 2\n\nThanks, have a good day! (halloween)';
+          //   }
+          // }
+          // if (replyMsg == '') {
+          //   replyMsg = 'Morning! How can I help u? (cony kiss)\n如何加入會員 => 1\n如何加入加入 => 2\n\nThanks, have a good day! (halloween)';
+          // }
+
+          event.reply(replyMsg).then(function(data) {
+            console.log(replyMsg);
+          }).catch(function(error) {
+            console.log('error');
+          });
+
+        } else {
+          // We reached our target server, but it returned an error
+
+        }
+      };
+
+      request.onerror = function() {
+        // There was a connection error of some sort
+      };
+
+      request.send();
     }
   });
 }
@@ -77,10 +97,10 @@ function _getJSON() {
   clearTimeout(timer);
   getJSON('http://opendata2.epa.gov.tw/AQX.json', function(error, response) {
     response.forEach(function(e, i) {
-      pm[i] = [];
-      pm[i][0] = e.SiteName;
-      pm[i][1] = e['PM2.5'] * 1;
-      pm[i][2] = e.PM10 * 1;
+      val[i] = [];
+      val[i][0] = e.SiteName;
+      val[i][1] = e['PM2.5'] * 1;
+      val[i][2] = e.PM10 * 1;
     });
   });
   timer = setInterval(_getJSON, 1800000); //每半小時抓取一次新資料
