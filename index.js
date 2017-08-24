@@ -65,10 +65,11 @@ function number() {
           // console.log('response: '+resp);
           var qaDataList = new Object;
           qaDataList = JSON.parse(resp);
-          qaDataList.forEach(function(e, i) {
+          request.responseText.forEach(function(e, i) {
             data[i] = [];
             data[i][0] = e.topic;
             data[i][1] = e.centent;
+            console.log(data[i]);
           });
 
           // if (msg.indexOf('1\r') != -1) {
