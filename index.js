@@ -56,7 +56,9 @@ function number() {
 
       var request = new XMLHttpRequest();
       request.open('POST', 'https://www.taiwanfundexchange.com.tw/TFEFrontend/qaQuery', true);
-      request.onload = function(msg) {
+      request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
+      request.send(msg);
+      request.onload = function() {
         if (request.status >= 200 && request.status < 400) {
           // Success!
           var resp = request.responseText;
