@@ -61,7 +61,13 @@ function number() {
         if (request.status >= 200 && request.status < 400) {
           // Success!
           var resp = request.responseText;
-          console.log('response: '+resp);
+          // console.log('response: '+resp);
+          resp.forEach(function(i) {
+            topic = qaDataList.topic[i];
+            content = qaDataList.content[i];
+            console.log(topic, content/n);
+          });
+
           // if (msg.indexOf('1\r') != -1) {
           //     replyMsg = 'dfafsdfsdfsa';
           //   if (replyMsg == '') {
