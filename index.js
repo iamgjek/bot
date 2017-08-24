@@ -63,7 +63,9 @@ function number() {
           var resp = request.responseText;
           // console.log('response: '+resp);
           var data = JSON.parse(resp);
-          replyMsg == "'"+data.qaDataList+"'";
+          data.forEach(function(i) {
+            console.log(data.topic[i]);
+          });
           // if (msg.indexOf('1\r') != -1) {
           //     replyMsg = 'dfafsdfsdfsa';
           //   if (replyMsg == '') {
