@@ -54,6 +54,7 @@ function number() {
       var msg = event.message.text;
       var replyMsg = '';
 
+      var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
       var request = new XMLHttpRequest();
       request.open('POST', 'https://www.taiwanfundexchange.com.tw/TFEFrontend/qaQuery', true);
       request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
