@@ -63,13 +63,9 @@ function number() {
           // Success!
           var resp = request.responseText;
           // console.log('response: '+resp);
-          var qaDataList = new Object;
-          qaDataList = JSON.parse(resp);
-          qaDataList.forEach.call(function(e, i) {
-            data[i] = [];
-            data[i][0] = e.topic;
-            data[i][1] = e.centent;
-            console.log(data[i]);
+          var array = resp.qaDataList;
+          $.each(array, function(entryIndex, entry) {
+            console.log(entry.topic, entry.content);
           });
 
           // if (msg.indexOf('1\r') != -1) {
