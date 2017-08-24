@@ -65,8 +65,11 @@ function number() {
           // console.log('response: '+resp);
           var qaDataList = new Object;
           qaDataList = JSON.parse(resp);
-          console.log(qaDataList.topic);
-          console.log(qaDataList.qaDataList.topic);
+          qaDataList.forEach(function(e, i) {
+            data[i] = [];
+            data[i][0] = e.topic;
+            data[i][1] = e.centent;
+          });
 
           // if (msg.indexOf('1\r') != -1) {
           //     replyMsg = 'dfafsdfsdfsa';
@@ -101,10 +104,10 @@ function _getJSON() {
   clearTimeout(timer);
   getJSON('http://opendata2.epa.gov.tw/AQX.json', function(error, response) {
     response.forEach(function(e, i) {
-      val[i] = [];
-      val[i][0] = e.SiteName;
-      val[i][1] = e['PM2.5'] * 1;
-      val[i][2] = e.PM10 * 1;
+      pm[i] = [];
+      pm[i][0] = e.SiteName;
+      pm[i][1] = e['PM2.5'] * 1;
+      pm[i][2] = e.PM10 * 1;
     });
   });
   timer = setInterval(_getJSON, 1800000); //每半小時抓取一次新資料
