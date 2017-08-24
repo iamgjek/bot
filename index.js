@@ -52,9 +52,9 @@ function number() {
   bot.on('message', function(event) {
     if (event.message.type = 'text') {
       var msg = event.message.text;
-      var replyMsg = '';
+      var replyMsg = '+ '+msg+'：\n'+'https://www.taiwanfundexchange.com.tw/TFEFrontend/qa?queryText='+ msg;
       if (msg.indexOf('1\r') != -1) {
-          replyMsg = '+ '+msg+'：\n'+'https://www.taiwanfundexchange.com.tw/TFEFrontend/qa?queryText='+ msg;
+          replyMsg = 'dfafsdfsdfsa';
         if (replyMsg == '') {
           replyMsg = 'Morning! How can I help u? (cony kiss)\n參加前注意事項 => 1\n加入競標組合 => 2\n\nThanks, have a good day! (halloween)';
         }
