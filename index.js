@@ -64,7 +64,7 @@ function number() {
           // console.log('response: '+resp);
           var qaDataList = [];
 
-          getJSON(resp, function(error, response) {
+          getJSON("'"+resp+"'", function(error, response) {
             response.forEach(function(e, i) {
               qaDataList[i] = [];
               qaDataList[i][0] = e.topic;
