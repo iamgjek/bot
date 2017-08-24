@@ -15,7 +15,9 @@ var timer;
 var pm = [];
 _getJSON();
 
-_bot();
+// _pm();
+repeat();
+_japan();
 
 const app = express();
 const linebotParser = bot.parser();
@@ -27,7 +29,29 @@ var server = app.listen(process.env.PORT || 8080, function() {
   console.log("App now running on port", port);
 });
 
-function _bot() {
+setTimeout(function() {
+    var userId = '使用者 ID';
+    var sendMsg = '要發送的文字';
+    bot.push(userId,sendMsg);
+    console.log('send: '+sendMsg);
+}, 5000);
+
+function repeat() {
+  bot.on('message', function(event) {
+    if (event.message.type = 'text') {
+      var msg = event.message.text;
+      event.reply(msg).then(function(data) {
+        // success 
+        console.log(msg);
+      }).catch(function(error) {
+        // error 
+        console.log('error');
+      });
+    }
+  });
+}
+
+function _pm() {
   bot.on('message', function(event) {
     if (event.message.type == 'text') {
       var msg = event.message.text;
@@ -54,6 +78,27 @@ function _bot() {
     }
   });
 
+}
+
+function _japan() {
+  clearTimeout(timer2);
+  request({
+    url: "http://rate.bot.com.tw/Pages/Static/UIP003.zh-TW.htm",
+    method: "GET"
+  }, function(error, response, body) {
+    if (error || !body) {
+      return;
+    } else {
+      var $ = cheerio.load(body);
+      var target = $(".rate-content-sight.text-right.print_hide");
+      console.log(target[15].children[0].data);
+      jp = target[15].children[0].data;
+      if (jp < 0.28) {
+        bot.push('使用者 ID', '現在日幣 ' + jp + '，該買啦！');
+      }
+      timer2 = setInterval(_japan, 120000);
+    }
+  });
 }
 
 function _getJSON() {
