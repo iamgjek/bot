@@ -28,12 +28,12 @@ var timer;
 _repeat();
 // _japan();
 
-setTimeout(function() {
-    var userId = '使用者 ID';
-    var sendMsg = '要發送的文字';
-    bot.push(userId,sendMsg);
-    console.log('send: '+sendMsg);
-}, 5000);
+// setTimeout(function() {
+//     var userId = event.message.id;
+//     var sendMsg = '要發送的文字';
+//     bot.push(userId,sendMsg);
+//     console.log('send: '+sendMsg);
+// }, 5000);
 
 function _repeat() {
   bot.on('message', function(event) {
@@ -44,6 +44,30 @@ function _repeat() {
         console.log(msg);
       }).catch(function(error) {
         // error 
+        console.log('error');
+      });
+    }
+  });
+}
+
+function number() {
+  bot.on('message', function(event) {
+    if (event.message.type = 'text') {
+      var msg = event.message.text;
+      var replyMsg = '';
+      if (msg.indexOf('1') != -1) {
+          replyMsg = '如何加入會員: ';
+        if (replyMsg == '') {
+          replyMsg = 'Morning! How can I help u? (cony kiss)\n如何加入會員 => 1\n如何加入加入 => 2\n\nThanks, have a good day! (halloween)';
+        }
+      }
+      if (replyMsg == '') {
+        replyMsg = '不知道「'+msg+'」是什麼意思 :p';
+      }
+
+      event.reply(replyMsg).then(function(data) {
+        console.log(replyMsg);
+      }).catch(function(error) {
         console.log('error');
       });
     }
