@@ -64,7 +64,7 @@ function number() {
           var resp = request.responseText;
           // console.log('response: '+resp);
           var array = resp.qaDataList;
-          foreach(array, function(entryIndex, entry) {
+          array.forEach(function(entryIndex, entry) {
             console.log(entry.topic, entry.content);
           });
 
