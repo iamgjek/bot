@@ -22,11 +22,8 @@ bot.on('message', function(event) {
 });
 
 var timer;
-// var pm = [];
 // _getJSON();
-// _pm();
 // _repeat();
-// _japan();
 number();
 
 // setTimeout(function() {
@@ -56,10 +53,10 @@ function number() {
     if (event.message.type = 'text') {
       var msg = event.message.text;
       var replyMsg = '';
-      if (msg.indexOf('1') != -1) {
-          replyMsg = '如何加入會員: ';
+      if (msg.indexOf('1\r') != -1) {
+          replyMsg = '+ '+msg+'：\n'+'https://www.taiwanfundexchange.com.tw/TFEFrontend/qa?queryText='+ msg;
         if (replyMsg == '') {
-          replyMsg = 'Morning! How can I help u? (cony kiss)\n如何加入會員 => 1\n如何加入加入 => 2\n\nThanks, have a good day! (halloween)';
+          replyMsg = 'Morning! How can I help u? (cony kiss)\n參加前注意事項 => 1\n加入競標組合 => 2\n\nThanks, have a good day! (halloween)';
         }
       }
       if (replyMsg == '') {
@@ -75,33 +72,6 @@ function number() {
   });
 }
 
-function _pm() {
-  bot.on('message', function(event) {
-    if (event.message.type == 'text') {
-      var msg = event.message.text;
-      var replyMsg = '';
-      if (msg.indexOf('PM2.5') != -1) {
-        pm.forEach(function(e, i) {
-          if (msg.indexOf(e[0]) != -1) {
-            replyMsg = e[0] + '的 PM2.5 數值為 ' + e[1];
-          }
-        });
-        if (replyMsg == '') {
-          replyMsg = '請輸入正確的地點';
-        }
-      }
-      if (replyMsg == '') {
-        replyMsg = '不知道「'+msg+'」是什麼意思 :p';
-      }
-
-      event.reply(replyMsg).then(function(data) {
-        console.log(replyMsg);
-      }).catch(function(error) {
-        console.log('error');
-      });
-    }
-  });
-}
 
 function _getJSON() {
   clearTimeout(timer);
