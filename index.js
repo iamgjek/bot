@@ -62,12 +62,16 @@ function number() {
           // Success!
           var resp = request.responseText;
           // console.log('response: '+resp);
-          resp.forEach(function(i) {
-            topic = qaDataList.topic[i];
-            content = qaDataList.content[i];
-            console.log(topic, content/n);
-          });
+          var qaDataList = [];
 
+          getJSON(resp, function(error, response) {
+            response.forEach(function(e, i) {
+              qaDataList[i] = [];
+              qaDataList[i][0] = e.topic;
+              qaDataList[i][0] = e.content;
+            });
+          });
+          replyMsg == "'"+qaDataList+"'";
           // if (msg.indexOf('1\r') != -1) {
           //     replyMsg = 'dfafsdfsdfsa';
           //   if (replyMsg == '') {
@@ -86,7 +90,6 @@ function number() {
 
         } else {
           // We reached our target server, but it returned an error
-
         }
       };
 
