@@ -62,8 +62,8 @@ function number() {
           // Success!
           var resp = request.responseText;
           // console.log('response: '+resp);
-
-          replyMsg == "'"+resp.qaDataList.topic+"'";
+          var data = JSON.parse(resp);
+          replyMsg == "'"+data.qaDataList+"'";
           // if (msg.indexOf('1\r') != -1) {
           //     replyMsg = 'dfafsdfsdfsa';
           //   if (replyMsg == '') {
