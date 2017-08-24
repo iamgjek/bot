@@ -63,7 +63,7 @@ function number() {
         }
       }
       if (replyMsg == '') {
-        replyMsg = '不知道「'+msg+'」是什麼意思 :p';
+        replyMsg = 'Morning! How can I help u? (cony kiss)\n如何加入會員 => 1\n如何加入加入 => 2\n\nThanks, have a good day! (halloween)';
       }
 
       event.reply(replyMsg).then(function(data) {
