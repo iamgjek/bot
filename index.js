@@ -65,7 +65,7 @@ function number() {
           // console.log('response: '+resp);
           var qaDataList = new Object;
           qaDataList = JSON.parse(resp);
-          request.responseText.forEach(function(e, i) {
+          qaDataList.forEach.call(function(e, i) {
             data[i] = [];
             data[i][0] = e.topic;
             data[i][1] = e.centent;
