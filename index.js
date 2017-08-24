@@ -87,7 +87,7 @@ function number() {
       request.onerror = function() {
         // There was a connection error of some sort
       };
-      request.send(msg.toString());
+      request.send({queryText: msg});
     }
   });
 }
