@@ -63,10 +63,11 @@ function number() {
           // Success!
           var resp = request.responseText;
           // console.log('response: '+resp);
-          var data = JSON.parse(resp);
+          var qaDataList = [];
+          qaDataList = JSON.parse(resp);
           // console.log(data);
-          data.forEach(function(i) {
-            console.log('data: '+topic[i]);
+          qaDataList.forEach(function(i, el) {
+            console.log('data: '+el.topic+' - '+el.content);
           });
 
           // if (msg.indexOf('1\r') != -1) {
