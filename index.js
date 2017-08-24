@@ -65,7 +65,8 @@ function number() {
           // console.log('response: '+resp);
           var qaDataList = new Object;
           qaDataList = JSON.parse(resp);
-          console.log(qaDataList);
+          console.log(qaDataList.topic);
+          console.log(qaDataList.qaDataList.topic);
 
           // if (msg.indexOf('1\r') != -1) {
           //     replyMsg = 'dfafsdfsdfsa';
