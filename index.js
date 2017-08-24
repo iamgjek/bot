@@ -26,7 +26,7 @@ var timer;
 // _getJSON();
 // _pm();
 _repeat();
-_japan();
+// _japan();
 
 setTimeout(function() {
     var userId = '使用者 ID';
@@ -74,27 +74,6 @@ function _pm() {
       }).catch(function(error) {
         console.log('error');
       });
-    }
-  });
-}
-
-function _japan() {
-  clearTimeout(timer);
-  request({
-    url: "http://rate.bot.com.tw/Pages/Static/UIP003.zh-TW.htm",
-    method: "GET"
-  }, function(error, response, body) {
-    if (error || !body) {
-      return;
-    } else {
-      var $ = cheerio.load(body);
-      var target = $(".rate-content-sight.text-right.print_hide");
-      console.log(target[15].children[0].data);
-      jp = target[15].children[0].data;
-      if (jp < 0.28) {
-        bot.push('使用者 ID', '現在日幣 ' + jp + '，該買啦！');
-      }
-      timer = setInterval(_japan, 120000);
     }
   });
 }
