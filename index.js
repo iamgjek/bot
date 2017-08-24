@@ -63,7 +63,7 @@ function number() {
           // Success!
           var resp = request.responseText;
           // console.log('response: '+resp);
-          var qaDataList = [];
+          var qaDataList = new Object;
           qaDataList = JSON.parse(resp);
           console.log(qaDataList);
 
