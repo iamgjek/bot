@@ -1,6 +1,7 @@
 var linebot = require('linebot');
 var express = require('express');
 var getJSON = require('get-json');
+var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
 
 var bot = linebot({
   channelId: '1531674551',
@@ -53,8 +54,6 @@ function number() {
     if (event.message.type = 'text') {
       var msg = event.message.text;
       var replyMsg = '';
-
-      var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
       var request = new XMLHttpRequest();
       request.open('POST', 'https://www.taiwanfundexchange.com.tw/TFEFrontend/qaQuery', true);
       request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
