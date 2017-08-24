@@ -66,7 +66,7 @@ function number() {
           var data = JSON.parse(resp);
           // console.log(data);
           data.forEach(function(i) {
-            console.log('data: '+data.topic);
+            console.log('data: '+topic[i]);
           });
 
           // if (msg.indexOf('1\r') != -1) {
