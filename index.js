@@ -65,10 +65,7 @@ function number() {
           // console.log('response: '+resp);
           var qaDataList = [];
           qaDataList = JSON.parse(resp);
-          // console.log(data);
-          qaDataList.forEach(function(i, el) {
-            console.log('data: '+el.topic+' - '+el.content);
-          });
+          console.log(qaDataList);
 
           // if (msg.indexOf('1\r') != -1) {
           //     replyMsg = 'dfafsdfsdfsa';
