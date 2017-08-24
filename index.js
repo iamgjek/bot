@@ -25,8 +25,9 @@ var timer;
 // var pm = [];
 // _getJSON();
 // _pm();
-_repeat();
+// _repeat();
 // _japan();
+number();
 
 // setTimeout(function() {
 //     var userId = event.message.id;
