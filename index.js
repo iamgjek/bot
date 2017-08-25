@@ -61,16 +61,13 @@ function number() {
       request.onload = function() {
         if (request.status >= 200 && request.status < 400) {
           // Success!
-          var resp = request.responseText;
-          var array = [];
-          array = resp;
+          var resp = request.response;
           // console.log('response: '+array.qaDataList);
-          replyMsg = array.qaDataList;
-          // var array = resp.qaDataList;
+          var array = resp.qaDataList;
           // console.log('array:\n '+array);
-          // array.forEach(function(entryIndex, entry) {
-          //   console.log(entry.topic, entry.content);
-          // });
+          array.forEach(function(entryIndex, entry) {
+            console.log(entry.topic, entry.content);
+          });
 
           // if (msg.indexOf('1\r') != -1) {
           //     replyMsg = 'dfafsdfsdfsa';
