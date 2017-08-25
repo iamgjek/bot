@@ -62,8 +62,10 @@ function number() {
         if (request.status >= 200 && request.status < 400) {
           // Success!
           var resp = request.responseText;
-          console.log('response: '+resp.qaDataList);
-          replyMsg = "'"+resp.qaDataList+"'";
+          var array = [];
+          array = resp;
+          // console.log('response: '+array.qaDataList);
+          replyMsg = array.qaDataList;
           // var array = resp.qaDataList;
           // console.log('array:\n '+array);
           // array.forEach(function(entryIndex, entry) {
