@@ -71,9 +71,11 @@ function number() {
           var rUrl = 'https://www.taiwanfundexchange.com.tw/TFEFrontend/qa?queryText=';
           var newArray = [];
           for (var i = 0; i < array.length; i++) {
-            // if (i < 5) {
+            if (array) {
             newArray[i] = array[i].topic+' '+rUrl+array[i].topic+'\n\n';
-            // }
+            } else {
+              newArray = '你輸入的這是什麼鬼 (poop)';
+            }
           }
           // console.log(newArray);
           replyMsg = '你要找的是 "'+msg+'"\n機器人建議的結果為：\n\n'+newArray;
