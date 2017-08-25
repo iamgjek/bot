@@ -68,10 +68,12 @@ function number() {
           var array = resp.qaDataList;
           // console.log('array:\n '+array);
           var rUrl = 'https://www.taiwanfundexchange.com.tw/TFEFrontend/qa?queryText=';
+          var newArray = [];
           for (var i = 0; i < array.length; i++) {
-            // console.log(array[i].topic+' '+rUrl+array[i].topic+''+'\n');
-            replyMsg = array[i].topic+' '+rUrl+array[i].topic+''+'\n';
+            newArray[i] = array[i].topic+' '+rUrl+array[i].topic+''+'\n';
           }
+          console.log(newArray);
+          // replyMsg = '你要找的是'+msg+'\n'+array[i].topic+' '+rUrl+array[i].topic+''+'\n';
 
           // if (msg.indexOf('1\r') != -1) {
           //     replyMsg = 'dfafsdfsdfsa';
