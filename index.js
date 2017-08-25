@@ -72,11 +72,11 @@ function number() {
           if (array) {
             // console.log('array: '+array.length);
             for (var i = 0; i < array.length; i++) {
-              newArray[i] = '(sun) '+array[i].topic+' '+rUrl+array[i].topic+'\n\n';
+              newArray[i] = '  '+array[i].topic+' '+rUrl+array[i].topic+'\n\n';
             }
-            replyMsg = '你要找的是 "'+msg+'"(yes)\n(hee)機器人建議的結果為：\n\n'+newArray;
+            replyMsg = '你要找的是 "'+msg+'"...\n 機器人建議的結果為：\n\n'+newArray;
           } else {
-            newArray = '請問你輸入的這是什麼鬼 ' + '<img src="/static/basic/emoticon2/keyimage_161.png" height="25">';
+            newArray = '請問你輸入的這是什麼鬼... 看不懂啦 (╯‵□′)╯︵┴─┴';
             replyMsg = newArray;
           }
           event.reply(replyMsg).then(function(data) {
