@@ -67,18 +67,18 @@ function number() {
           // resp = resp.split(',');
           // console.log('response: \n'+resp);
           var array = resp.qaDataList;
-          // console.log('array:\n '+array);
+          console.log('array.length:\n '+array.length);
           var rUrl = 'https://www.taiwanfundexchange.com.tw/TFEFrontend/qa?queryText=';
           var newArray = [];
           if (array.length > 1) {
             for (var i = 0; i < array.length; i++) {
-              newArray[i] = array[i].topic+' '+rUrl+array[i].topic+'\n\n';
+              newArray[i] = '(sun) '+array[i].topic+' '+rUrl+array[i].topic+'\n\n';
             }
           } else {
             newArray = '你輸入的這是什麼鬼 (poop)';
           }
           // console.log(newArray);
-          replyMsg = '你要找的是 "'+msg+'"\n機器人建議的結果為：\n\n'+newArray;
+          replyMsg = '你要找的是 "'+msg+'"(yes)\n(hee)機器人建議的結果為：\n\n'+newArray;
 
           event.reply(replyMsg).then(function(data) {
             console.log(replyMsg);
