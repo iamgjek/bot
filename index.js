@@ -72,8 +72,8 @@ function number() {
           for (var i = 0; i < array.length; i++) {
             newArray[i] = array[i].topic+' '+rUrl+array[i].topic+''+'\n';
           }
-          console.log(newArray);
-          // replyMsg = '你要找的是'+msg+'\n'+array[i].topic+' '+rUrl+array[i].topic+''+'\n';
+          // console.log(newArray);
+          replyMsg = newArray;
 
           // if (msg.indexOf('1\r') != -1) {
           //     replyMsg = 'dfafsdfsdfsa';
