@@ -76,8 +76,7 @@ function number() {
             }
             replyMsg = '你要找的是 "'+msg+'"(yes)\n(hee)機器人建議的結果為：\n\n'+newArray;
           } else {
-            newArray = '請問你輸入的這是什麼鬼 (poop)';
-            console.log(newArray);
+            newArray = '請問你輸入的這是什麼鬼 ' + <img src="/static/basic/emoticon2/keyimage_161.png" height="25">;
             replyMsg = newArray;
           }
           event.reply(replyMsg).then(function(data) {
