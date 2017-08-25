@@ -64,8 +64,10 @@ function number() {
       request.onload = function() {
         if (request.status >= 200 && request.status < 400) {
           // Success!
+          // var resp = request.responseText;
           var resp = JSON.parse(request.responseText);
           // resp = resp.split(',');
+          // console.log('response: \n'+resp);
           var array = resp.qaDataList;
           console.log('array.length:\n '+array.length);
           if (array.length > 1) {
@@ -73,17 +75,19 @@ function number() {
               newArray[i] = '(sun) '+array[i].topic+' '+rUrl+array[i].topic+'\n\n';
             }
           }
+          // console.log(newArray);
           replyMsg = '你要找的是 "'+msg+'"(yes)\n(hee)機器人建議的結果為：\n\n'+newArray;
+
+          event.reply(replyMsg).then(function(data) {
+            console.log(replyMsg);
+          }).catch(function(error) {
+            console.log('error');
+          });
         } else {
           // We reached our target server, but it returned an error
             replyMsg = '請問你輸入的這是什麼鬼 (poop)';
         }
-        event.reply(replyMsg).then(function(data) {
-          console.log(replyMsg);
-        }).catch(function(error) {
-          console.log('error');
-        });
-      }
+      };
 
       request.onerror = function() {
         // There was a connection error of some sort
