@@ -56,17 +56,17 @@ function number() {
       var replyMsg = '';
       var request = new XMLHttpRequest();
       request.open('POST', 'https://www.taiwanfundexchange.com.tw/TFEFrontend/qaQuery', true);
-      request.overrideMimeType("application/json");
       // request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
       // request.responseType = "resp";
       request.send('queryText='+msg);
       request.onload = function() {
         if (request.status >= 200 && request.status < 400) {
           // Success!
-          var resp = JSON.parse(request.responseText);
+          var resp = new Object();
+          resp = JSON.parse(request.responseText);
           // console.log('response: \n'+resp);
-          var array = resp.qaDataList;
-          console.log('array:\n '+array);
+          // var array = resp.qaDataList;
+          console.log('array:\n '+resp.qaDataList);
           // array.forEach(function(entryIndex, entry) {
           //   console.log(entry.topic, entry.content);
           // });
