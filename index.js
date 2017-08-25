@@ -44,7 +44,7 @@ function number() {
       request.open('POST', 'https://www.taiwanfundexchange.com.tw/TFEFrontend/qaQuery', true);
       request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
       // request.responseType = "resp";
-      request.send('queryText='+msg'\w');
+      request.send('queryText='+msg);
       request.onload = function() {
         if (request.status >= 200 && request.status < 400) {
           // Success!
