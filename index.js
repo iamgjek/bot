@@ -47,9 +47,9 @@ function number() {
       request.onload = function() {
         if (request.status >= 200 && request.status < 400) {
           // Success!
-          var resp = request.responseText.split(',');
+          var resp = request.responseText;
           // var resp = JSON.parse(request.responseText);
-          // resp = resp.split(',');
+          resp = resp.split(',');
           // console.log('response: \n'+resp);
           var array = resp.qaDataList;
 
