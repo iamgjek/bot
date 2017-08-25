@@ -75,7 +75,7 @@ function number() {
           }
           // console.log(newArray);
           // replyMsg = '你要找的是 "'+msg+'" 機器人建議的結果為：\n'+newArray;
-          replyMsg = newArray;
+          replyMsg = 'newArray';
 
           event.reply(replyMsg).then(function(data) {
             console.log(replyMsg);
