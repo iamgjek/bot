@@ -70,15 +70,21 @@ function number() {
           // console.log('response: \n'+resp);
           var array = resp.qaDataList;
           if (array) {
-            console.log('array exist:\n '+array.length);
+            // console.log('array: '+array.length);
             for (var i = 0; i < array.length; i++) {
               newArray[i] = '(sun) '+array[i].topic+' '+rUrl+array[i].topic+'\n\n';
             }
             replyMsg = '你要找的是 "'+msg+'"(yes)\n(hee)機器人建議的結果為：\n\n'+newArray;
           } else {
             newArray = '請問你輸入的這是什麼鬼 (poop)';
+            console.log(newArray);
             replyMsg = newArray;
           }
+          event.reply(replyMsg).then(function(data) {
+            console.log(replyMsg);
+          }).catch(function(error) {
+            console.log('error');
+          });
         } else {
           // We reached our target server, but it returned an error
           replyMsg = 'We reached our target server, but it returned an error...';
@@ -89,12 +95,6 @@ function number() {
         // There was a connection error of some sort
         replyMsg = 'There was a connection error of some sort...';
       };
-
-      event.reply(replyMsg).then(function(data) {
-        console.log(replyMsg);
-      }).catch(function(error) {
-        console.log('error');
-      });
     }
   });
 }
