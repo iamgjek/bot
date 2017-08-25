@@ -70,12 +70,12 @@ function number() {
           // console.log('array:\n '+array);
           var rUrl = 'https://www.taiwanfundexchange.com.tw/TFEFrontend/qa?queryText=';
           var newArray = [];
-          for (var i = 0; i < array.length; i++) {
-            if (array) {
-            newArray[i] = array[i].topic+' '+rUrl+array[i].topic+'\n\n';
-            } else {
-              newArray = '你輸入的這是什麼鬼 (poop)';
+          if (array.length > 1) {
+            for (var i = 0; i < array.length; i++) {
+              newArray[i] = array[i].topic+' '+rUrl+array[i].topic+'\n\n';
             }
+          } else {
+            newArray = '你輸入的這是什麼鬼 (poop)';
           }
           // console.log(newArray);
           replyMsg = '你要找的是 "'+msg+'"\n機器人建議的結果為：\n\n'+newArray;
