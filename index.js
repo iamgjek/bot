@@ -62,7 +62,7 @@ function number() {
         if (request.status >= 200 && request.status < 400) {
           // Success!
           var resp = request.responseText;
-          // console.log('response: '+resp.qaDataList);
+          console.log('response: '+resp.qaDataList);
           replyMsg = "'"+resp.qaDataList+"'";
           // var array = resp.qaDataList;
           // console.log('array:\n '+array);
@@ -80,11 +80,11 @@ function number() {
           //   replyMsg = 'Morning! How can I help u? (cony kiss)\n如何加入會員 => 1\n如何加入加入 => 2\n\nThanks, have a good day! (halloween)';
           // }
 
-          // event.reply(replyMsg).then(function(data) {
-          //   console.log(replyMsg);
-          // }).catch(function(error) {
-          //   console.log('error');
-          // });
+          event.reply(replyMsg).then(function(data) {
+            console.log(replyMsg);
+          }).catch(function(error) {
+            console.log('error');
+          });
 
         } else {
           // We reached our target server, but it returned an error
