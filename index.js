@@ -64,9 +64,12 @@ function number() {
           var resp = request.responseText;
           // console.log('response: '+resp);
           var array = resp.qaDataList;
-          array.forEach(function(entryIndex, entry) {
-            console.log(entry.topic, entry.content);
-          });
+          console.log('array: '/n,array);
+          if(array) {
+            array.forEach(function(entryIndex, entry) {
+              console.log(entry.topic, entry.content);
+            });
+          }
 
           // if (msg.indexOf('1\r') != -1) {
           //     replyMsg = 'dfafsdfsdfsa';
