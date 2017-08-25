@@ -69,7 +69,10 @@ function number() {
           // resp = resp.split(',');
           // console.log('response: \n'+resp);
           var array = resp.qaDataList;
-          if (array) {
+
+          if (msg.indexOf('hello') != -1 || msg.indexOf('hi') != -1) {
+              replyMsg = 'Hi! 請輸入要查詢的問題～';
+          } else if (array) {
             // console.log('array: '+array.length);
             for (var i = 0; i < array.length; i++) {
               newArray[i] = '  '+array[i].topic+' '+rUrl+array[i].topic+'\n\n';
@@ -79,11 +82,13 @@ function number() {
             newArray = '請問你輸入的這是什麼鬼... 看不懂啦 (╯‵□′)╯︵┴─┴';
             replyMsg = newArray;
           }
+
           event.reply(replyMsg).then(function(data) {
             console.log(replyMsg);
           }).catch(function(error) {
             console.log('error');
           });
+
         } else {
           // We reached our target server, but it returned an error
           replyMsg = 'We reached our target server, but it returned an error...';
