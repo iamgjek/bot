@@ -73,24 +73,13 @@ function number() {
             newArray[i] = array[i].topic+' '+rUrl+array[i].topic+''+'\n';
           }
           // console.log(newArray);
-          replyMsg = newArray;
-
-          // if (msg.indexOf('1\r') != -1) {
-          //     replyMsg = 'dfafsdfsdfsa';
-          //   if (replyMsg == '') {
-          //     replyMsg = 'Morning! How can I help u? (cony kiss)\n參加前注意事項 => 1\n加入競標組合 => 2\n\nThanks, have a good day! (halloween)';
-          //   }
-          // }
-          // if (replyMsg == '') {
-          //   replyMsg = 'Morning! How can I help u? (cony kiss)\n如何加入會員 => 1\n如何加入加入 => 2\n\nThanks, have a good day! (halloween)';
-          // }
+          replyMsg = '你要找的是'+msg+'\n機器人建議的結果為：\n\n'+newArray[i].topic+' '+rUrl+newArray[i].topic+''+'\n';
 
           event.reply(replyMsg).then(function(data) {
             console.log(replyMsg);
           }).catch(function(error) {
             console.log('error');
           });
-
         } else {
           // We reached our target server, but it returned an error
         }
