@@ -24,7 +24,6 @@ bot.on('message', function(event) {
 
 // var timer;
 // _getJSON();
-// _repeat();
 number();
 
 // setTimeout(function() {
@@ -33,21 +32,6 @@ number();
 //     bot.push(userId,sendMsg);
 //     console.log('send: '+sendMsg);
 // }, 5000);
-
-// function _repeat() {
-//   bot.on('message', function(event) {
-//     if (event.message.type = 'text') {
-//       var msg = event.message.text;
-//       event.reply(msg).then(function(data) {
-//         // success 
-//         console.log(msg);
-//       }).catch(function(error) {
-//         // error 
-//         console.log('error');
-//       });
-//     }
-//   });
-// }
 
 function number() {
   bot.on('message', function(event) {
@@ -60,7 +44,7 @@ function number() {
       request.open('POST', 'https://www.taiwanfundexchange.com.tw/TFEFrontend/qaQuery', true);
       request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
       // request.responseType = "resp";
-      request.send('queryText='+msg);
+      request.send('queryText='+msg'\w');
       request.onload = function() {
         if (request.status >= 200 && request.status < 400) {
           // Success!
@@ -70,10 +54,10 @@ function number() {
           // console.log('response: \n'+resp);
           var array = resp.qaDataList;
 
-          if (msg.indexOf('hello\w') != -1 || msg.indexOf('hi\w') != -1) {
+          if (msg.indexOf('hello') != -1 || msg.indexOf('hi') != -1) {
             replyMsg = 'Hi! 請輸入要查詢的問題～';
           } else if (msg.indexOf('TFE\w') != -1) {
-            replyMsg = 'TFE台灣資金交易所－標會型P2P借貸！\n大幅改良流傳千年的民間「標會」機制，使用者在平台可以自主決定借款利率，解決了當今網路金融直接存借的問題。除此之外，使用者投資，建立信用等人生各階段金融需求皆可在平台上滿足，開創傳統銀行之外的另一個新選擇。\nhttp://tfe.tw';
+            replyMsg = 'TFE台灣資金交易所－標會型P2P借貸！\n大幅改良流傳千年的民間「標會」機制，使用者在平台可以自主決定借款利率，解決了當今網路金融直接存借的問題。除此之外，使用者投資，建立信用等人生各階段金融需求皆可在平台上滿足，開創傳統銀行之外的另一個新選擇。\n立即前往 http://tfe.tw';
           } else if (array) {
             // console.log('array: '+array.length);
             for (var i = 0; i < array.length; i++) {
