@@ -70,28 +70,31 @@ function number() {
           // console.log('response: \n'+resp);
           var array = resp.qaDataList;
           console.log('array.length:\n '+array.length);
-          if (array.length > 1) {
+          if (array.length != 'undefined') {
             for (var i = 0; i < array.length; i++) {
               newArray[i] = '(sun) '+array[i].topic+' '+rUrl+array[i].topic+'\n\n';
             }
+            replyMsg = '你要找的是 "'+msg+'"(yes)\n(hee)機器人建議的結果為：\n\n'+newArray;
+          } else {
+            newArray = '請問你輸入的這是什麼鬼 (poop)';
+            replyMsg = newArray;
           }
-          // console.log(newArray);
-          replyMsg = '你要找的是 "'+msg+'"(yes)\n(hee)機器人建議的結果為：\n\n'+newArray;
-
-          event.reply(replyMsg).then(function(data) {
-            console.log(replyMsg);
-          }).catch(function(error) {
-            console.log('error');
-          });
         } else {
           // We reached our target server, but it returned an error
-            replyMsg = '請問你輸入的這是什麼鬼 (poop)';
+          replyMsg = 'We reached our target server, but it returned an error...';
         }
       };
 
       request.onerror = function() {
         // There was a connection error of some sort
+        replyMsg = 'There was a connection error of some sort...';
       };
+
+      event.reply(replyMsg).then(function(data) {
+        console.log(replyMsg);
+      }).catch(function(error) {
+        console.log('error');
+      });
     }
   });
 }
