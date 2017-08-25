@@ -69,7 +69,8 @@ function number() {
           // console.log('array:\n '+array);
           var rUrl = 'https://www.taiwanfundexchange.com.tw/TFEFrontend/qa?queryText=';
           for (var i = 0; i < array.length; i++) {
-            console.log(array[i].topic+' '+rUrl+array[i].topic+''+'\n');
+            // console.log(array[i].topic+' '+rUrl+array[i].topic+''+'\n');
+            replyMsg = array[i].topic+' '+rUrl+array[i].topic+''+'\n';
           }
 
           // if (msg.indexOf('1\r') != -1) {
