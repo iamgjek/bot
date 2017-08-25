@@ -72,15 +72,19 @@ function number() {
 
           if (msg.indexOf('hello') != -1 || msg.indexOf('hi') != -1) {
               replyMsg = 'Hi! 請輸入要查詢的問題～';
-          } else if (array) {
-            // console.log('array: '+array.length);
-            for (var i = 0; i < array.length; i++) {
-              newArray[i] = '  '+array[i].topic+' '+rUrl+array[i].topic+'\n\n';
+          } else if (msg.indexOf(msg) != -1) {
+
+            if (array) {
+              // console.log('array: '+array.length);
+              for (var i = 0; i < array.length; i++) {
+                newArray[i] = '  '+array[i].topic+' '+rUrl+array[i].topic+'\n\n';
+              }
+              replyMsg = '你要找的是 "'+msg+'"...\n 機器人建議的結果為：\n\n'+newArray;
+            } else {
+              newArray = '請問你輸入的這是什麼鬼... 看不懂啦 (╯‵□′)╯︵┴─┴';
+              replyMsg = newArray;
             }
-            replyMsg = '你要找的是 "'+msg+'"...\n 機器人建議的結果為：\n\n'+newArray;
-          } else {
-            newArray = '請問你輸入的這是什麼鬼... 看不懂啦 (╯‵□′)╯︵┴─┴';
-            replyMsg = newArray;
+
           }
 
           event.reply(replyMsg).then(function(data) {
