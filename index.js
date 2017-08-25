@@ -64,6 +64,7 @@ function number() {
           // Success!
           // var resp = request.responseText;
           var resp = JSON.parse(request.responseText);
+          resp = resp.Split(',');
           // console.log('response: \n'+resp.qaDataList);
           var array = resp.qaDataList;
           // console.log('array:\n '+array);
@@ -73,7 +74,8 @@ function number() {
             newArray[i] = array[i].topic+' '+rUrl+array[i].topic+'\n';
           }
           // console.log(newArray);
-          replyMsg = "'"+'你要找的是 "'+msg+'" 機器人建議的結果為：\n'+newArray+"'";
+          // replyMsg = '你要找的是 "'+msg+'" 機器人建議的結果為：\n'+newArray;
+          replyMsg = "'"+newArray+"'";
 
           event.reply(replyMsg).then(function(data) {
             console.log(replyMsg);
