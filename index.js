@@ -69,8 +69,8 @@ function number() {
           // resp = resp.split(',');
           // console.log('response: \n'+resp);
           var array = resp.qaDataList;
-          console.log('array.length:\n '+array.length);
-          if (array.length != 'undefined') {
+          console.log('array exist:\n '+array.length);
+          if (array) {
             for (var i = 0; i < array.length; i++) {
               newArray[i] = '(sun) '+array[i].topic+' '+rUrl+array[i].topic+'\n\n';
             }
