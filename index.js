@@ -62,14 +62,14 @@ function number() {
       request.onload = function() {
         if (request.status >= 200 && request.status < 400) {
           // Success!
-          var resp = new Object();
-          resp = JSON.parse(request.responseText);
+          var resp = JSON.parse(request.responseText);
           // console.log('response: \n'+resp);
-          // var array = resp.qaDataList;
-          console.log('array:\n '+resp.qaDataList);
-          // array.forEach(function(entryIndex, entry) {
-          //   console.log(entry.topic, entry.content);
-          // });
+          var array = new Object();
+          array = resp;
+          console.log('array:\n '+array.qaDataList);
+          array.forEach(function(entryIndex, entry) {
+            console.log(entry.topic, entry.content);
+          });
 
           // if (msg.indexOf('1\r') != -1) {
           //     replyMsg = 'dfafsdfsdfsa';
