@@ -62,14 +62,13 @@ function number() {
         if (request.status >= 200 && request.status < 400) {
           // Success!
           var resp = request.responseText;
-          console.log('response: \n'+resp);
+          // console.log('response: '+resp.qaDataList);
+          replyMsg = "'"+resp.qaDataList+"'";
           // var array = resp.qaDataList;
           // console.log('array:\n '+array);
-          if(resp) {
-            resp.forEach(function(entryIndex, entry) {
-              console.log(entry.topic, entry.content);
-            });
-          }
+          // array.forEach(function(entryIndex, entry) {
+          //   console.log(entry.topic, entry.content);
+          // });
 
           // if (msg.indexOf('1\r') != -1) {
           //     replyMsg = 'dfafsdfsdfsa';
