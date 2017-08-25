@@ -71,12 +71,12 @@ function number() {
           var rUrl = 'https://www.taiwanfundexchange.com.tw/TFEFrontend/qa?queryText=';
           var newArray = [];
           for (var i = 0; i < array.length; i++) {
-            if (i > 5) {
-            newArray[i] = array[i].topic+' '+rUrl+array[i].topic+'\n';
-            }
+            // if (i < 5) {
+            newArray[i] = array[i].topic+' '+rUrl+array[i].topic+'\n\n';
+            // }
           }
           // console.log(newArray);
-          replyMsg = '你要找的是 "'+msg+'" 機器人建議的結果為：\n'+newArray;
+          replyMsg = '你要找的是 "'+msg+'"\n機器人建議的結果為：\n\n'+newArray;
 
           event.reply(replyMsg).then(function(data) {
             console.log(replyMsg);
