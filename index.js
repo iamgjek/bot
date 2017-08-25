@@ -49,9 +49,8 @@ function number() {
           // Success!
           // var resp = request.responseText;
           var resp = JSON.parse(request.responseText);
-          resp = resp.split(',');
           // console.log('response: \n'+resp);
-          var array = resp.qaDataList;
+          var array = resp.qaDataList.split(',');
 
           if (msg.indexOf('hello') != -1 || msg.indexOf('hi') != -1) {
             replyMsg = 'Hi! 請輸入要查詢的問題～';
