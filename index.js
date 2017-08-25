@@ -73,7 +73,7 @@ function number() {
             newArray[i] = array[i].topic+' '+rUrl+array[i].topic+''+'\n';
           }
           // console.log(newArray);
-          replyMsg = '你要找的是'+msg+'\n機器人建議的結果為：\n\n'+newArray[i].topic+' '+rUrl+newArray[i].topic+''+'\n';
+          replyMsg = '你要找的是'+msg+'\n機器人建議的結果為：\n\n'+newArray+'\n';
 
           event.reply(replyMsg).then(function(data) {
             console.log(replyMsg);
