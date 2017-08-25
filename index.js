@@ -22,7 +22,7 @@ bot.on('message', function(event) {
   console.log(event); //把收到訊息的 event 印出來看看
 });
 
-var timer;
+// var timer;
 // _getJSON();
 // _repeat();
 number();
@@ -34,20 +34,20 @@ number();
 //     console.log('send: '+sendMsg);
 // }, 5000);
 
-function _repeat() {
-  bot.on('message', function(event) {
-    if (event.message.type = 'text') {
-      var msg = event.message.text;
-      event.reply(msg).then(function(data) {
-        // success 
-        console.log(msg);
-      }).catch(function(error) {
-        // error 
-        console.log('error');
-      });
-    }
-  });
-}
+// function _repeat() {
+//   bot.on('message', function(event) {
+//     if (event.message.type = 'text') {
+//       var msg = event.message.text;
+//       event.reply(msg).then(function(data) {
+//         // success 
+//         console.log(msg);
+//       }).catch(function(error) {
+//         // error 
+//         console.log('error');
+//       });
+//     }
+//   });
+// }
 
 function number() {
   bot.on('message', function(event) {
@@ -64,8 +64,8 @@ function number() {
           // Success!
           // var resp = request.responseText;
           var resp = JSON.parse(request.responseText);
-          // resp = resp.Split(',');
-          // console.log('response: \n'+resp.qaDataList);
+          // resp = resp.split(',');
+          // console.log('response: \n'+resp);
           var array = resp.qaDataList;
           // console.log('array:\n '+array);
           var rUrl = 'https://www.taiwanfundexchange.com.tw/TFEFrontend/qa?queryText=';
@@ -96,15 +96,15 @@ function number() {
 }
 
 
-function _getJSON() {
-  clearTimeout(timer);
-  getJSON('http://opendata2.epa.gov.tw/AQX.json', function(error, response) {
-    response.forEach(function(e, i) {
-      pm[i] = [];
-      pm[i][0] = e.SiteName;
-      pm[i][1] = e['PM2.5'] * 1;
-      pm[i][2] = e.PM10 * 1;
-    });
-  });
-  timer = setInterval(_getJSON, 1800000); //每半小時抓取一次新資料
-}
+// function _getJSON() {
+//   clearTimeout(timer);
+//   getJSON('http://opendata2.epa.gov.tw/AQX.json', function(error, response) {
+//     response.forEach(function(e, i) {
+//       pm[i] = [];
+//       pm[i][0] = e.SiteName;
+//       pm[i][1] = e['PM2.5'] * 1;
+//       pm[i][2] = e.PM10 * 1;
+//     });
+//   });
+//   timer = setInterval(_getJSON, 1800000); //每半小時抓取一次新資料
+// }
