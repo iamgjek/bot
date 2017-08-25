@@ -62,14 +62,15 @@ function number() {
       request.onload = function() {
         if (request.status >= 200 && request.status < 400) {
           // Success!
+          // var resp = request.responseText;
           var resp = JSON.parse(request.responseText);
-          // console.log('response: \n'+resp);
-          var array = new Object();
-          array = resp;
-          console.log('array:\n '+array.qaDataList);
-          array.forEach(function(entryIndex, entry) {
-            console.log(entry.topic, entry.content);
-          });
+          // console.log('response: \n'+resp.qaDataList);
+          var array = resp.qaDataList;
+          // console.log('array:\n '+array);
+          var rUrl = 'https://www.taiwanfundexchange.com.tw/TFEFrontend/qa?queryText=';
+          for (var i = 0; i < array.length; i++) {
+            console.log(array[i].topic+' '+rUrl+array[i].topic+''+'\n');
+          }
 
           // if (msg.indexOf('1\r') != -1) {
           //     replyMsg = 'dfafsdfsdfsa';
