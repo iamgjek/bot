@@ -64,7 +64,7 @@ function number() {
           // Success!
           // var resp = request.responseText;
           var resp = JSON.parse(request.responseText);
-          resp = resp.Split(',');
+          // resp = resp.Split(',');
           // console.log('response: \n'+resp.qaDataList);
           var array = resp.qaDataList;
           // console.log('array:\n '+array);
