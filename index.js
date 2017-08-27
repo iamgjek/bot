@@ -75,19 +75,16 @@ function number() {
           // We reached our target server, but it returned an error
           replyMsg = '親～連線好像有點問題，請稍後再試！';
         }
+        event.reply(replyMsg).then(function(data) {
+          console.log(replyMsg);
+        }).catch(function(error) {
+          console.log('error');
+        });
       };
 
       request.onerror = function() {
         // There was a connection error of some sort
-        replyMsg = '親～連線好像有點問題，請稍後再試！';
       };
-
-      event.reply(replyMsg).then(function(data) {
-        console.log(replyMsg);
-      }).catch(function(error) {
-        console.log('error');
-      });
-      
     }
   });
 }
