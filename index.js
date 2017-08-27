@@ -18,9 +18,9 @@ var server = app.listen(process.env.PORT || 8080, function() {
   console.log("App now running on port: ", port);
 });
 
-bot.on('message', function(event) {
-  console.log(event); //把收到訊息的 event 印出來看看
-});
+// bot.on('message', function(event) {
+//   console.log(event); //把收到訊息的 event 印出來看看
+// });
 
 // var timer;
 // _getJSON();
@@ -52,10 +52,14 @@ function number() {
           // console.log('response: \n'+resp);
           var array = resp.qaDataList;
 
-          if (msg.indexOf('hello') != -1 || msg.indexOf('hi') != -1) {
+          if (msg.indexOf('hello') != -1 || msg.indexOf('hi') != -1 || msg.indexOf('Hello') != -1 || msg.indexOf('Hi') != -1) {
             replyMsg = 'Hi! 請輸入要查詢的問題～';
-          } else if (msg.indexOf('TFE') != -1 || msg.indexOf('tfe') != -1) {
-            replyMsg = 'TFE台灣資金交易所－標會型P2P借貸！\n大幅改良流傳千年的民間「標會」機制，使用者在平台可以自主決定借款利率，解決了當今網路金融直接存借的問題。除此之外，使用者投資，建立信用等人生各階段金融需求皆可在平台上滿足，開創傳統銀行之外的另一個新選擇。\n立即前往 http://tfe.tw';
+          } else if (msg.indexOf('TFE') != -1 || msg.indexOf('tfe') != -1 || msg.indexOf('Tfe') != -1) {
+            replyMsg = 'TFE台灣資金交易所－標會型P2P借貸！\n大幅改良流傳千年的民間「標會」機制，使用者在平台可以自主決定借款利率，解決了當今網路金融直接存借的問題。除此之外，使用者投資，建立信用等人生各階段金融需求皆可在平台上滿足，開創傳統銀行之外的另一個新選擇。\n立即前往 >> http://tfe.tw';
+          } else if (msg.indexOf('我要') != -1 ) {
+            replyMsg = '要你得大頭啦～';
+          } else if (msg.indexOf('我想') != -1 ) {
+            replyMsg = '想你鬼啦～';
           } else if (array) {
             // console.log('array: '+array.length);
             for (var i = 0; i < array.length; i++) {
@@ -63,7 +67,7 @@ function number() {
             }
             replyMsg = '你要找的關鍵字為 " '+msg+' "...\n機器人搜尋的結果為：\n\n'+newArray;
           } else {
-            newArray = '拍謝！這API只能精準搜尋，不支持模糊比對 (╯‵□′)╯︵┴─┴';
+            newArray = '拍謝厚！這API只能精準搜尋，不支持模糊比對 (╯‵□′)╯︵┴─┴\n建議用單詞來進行搜尋，例如：開標、信用額度等等\n我知道很爛啦，就別嫌了XDD';
             replyMsg = newArray;
           }
 
