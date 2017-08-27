@@ -65,7 +65,7 @@ function number() {
             for (var i = 0; i < array.length; i++) {
               newArray[i] = ' '+array[i].topic+' '+rUrl+array[i].topic+'\n\n';
             }
-            replyMsg = '你要找的關鍵字為 " '+msg+' "...\n去中心化AI機器人U+1F60E比對的結果，推薦給您：\n\n'+newArray;
+            replyMsg = '你要找的關鍵字為 " '+msg+' "...\n去中心化AI機器人比對的結果，推薦給您：\n\n'+newArray;
           } else {
             newArray = '拍謝厚！這API只能精準搜尋，不支持模糊比對 (╯‵□′)╯︵┴─┴\n建議用單詞來進行搜尋，例如：開標、信用額度等等...\n\n我知道很爛啦，就別嫌了XDD';
             replyMsg = newArray;
