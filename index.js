@@ -58,11 +58,10 @@ function number() {
             replyMsg = 'TFE台灣資金交易所－標會型P2P借貸！\n大幅改良流傳千年的民間「標會」機制，使用者在平台可以自主決定借款利率，解決了當今網路金融直接存借的問題。除此之外，使用者投資，建立信用等人生各階段金融需求皆可在平台上滿足，開創傳統銀行之外的另一個新選擇。\n立即前往 http://tfe.tw';
           } else if (array) {
             // console.log('array: '+array.length);
-            // for (var i = 0; i < array.length; i++) {
-            //   newArray[i] = ' '+array[i].topic+' '+rUrl+array[i].topic+'\n\n';
-            // }
-            // replyMsg = '你要找的關鍵字為 " '+msg+' "...\n機器人搜尋的結果為：\n\n'+newArray;
-            replyMsg = array;
+            for (var i = 0; i < array.length; i++) {
+              newArray[i] = ' '+array[i].topic+' '+rUrl+array[i].topic+'\n\n';
+            }
+            replyMsg = '你要找的關鍵字為 " '+msg+' "...\n機器人搜尋的結果為：\n\n'+newArray;
           } else {
             newArray = '拍謝！這API只能精準搜尋，不支持模糊比對 (╯‵□′)╯︵┴─┴';
             replyMsg = newArray;
