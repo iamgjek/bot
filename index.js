@@ -134,9 +134,9 @@ function number() {
           // console.log('response: \n'+resp);
           var array = resp.qaDataList;
 
-          if (msg.indexOf('1') != -1 ) {
+          if (msg.indexOf('1') != -1 || msg.indexOf('主畫面') != -1 || msg.indexOf('主選單') != -1) {
             replyMsg = tmp_carousel;
-          } else if (msg.indexOf('2') != -1 ) {
+          } else if (msg.indexOf('2') != -1) {
             replyMsg = tmp_button;
           } else if (msg.indexOf('hello') != -1 || msg.indexOf('hi') != -1 || msg.indexOf('Hello') != -1 || msg.indexOf('Hi') != -1 || msg.indexOf('哪位') != -1 || msg.indexOf('說話') != -1 || msg.indexOf('嗎') != -1) {
             replyMsg = '請不要跟機器人聊天，以免影響工作效率... 要把妹去去去～';
