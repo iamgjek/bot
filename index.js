@@ -53,21 +53,21 @@ function number() {
           var array = resp.qaDataList;
 
           if (msg.indexOf('hello') != -1 || msg.indexOf('hi') != -1 || msg.indexOf('Hello') != -1 || msg.indexOf('Hi') != -1 || msg.indexOf('哪位') != -1 || msg.indexOf('說話') != -1 || msg.indexOf('嗎') != -1) {
-            replyMsg = '請不要跟機器人聊天，以免影響工作效率... 要把妹去去去～';
+            replyMsg = '請不要跟機器人聊天[0x100026]，以免影響工作效率... 要把妹去去去~';
           } else if (msg.indexOf('TFE') != -1 || msg.indexOf('tfe') != -1 || msg.indexOf('Tfe') != -1) {
             replyMsg = 'TFE台灣資金交易所－標會型P2P借貸！\n大幅改良流傳千年的民間「標會」機制，使用者在平台可以自主決定借款利率，解決了當今網路金融直接存借的問題。除此之外，使用者投資，建立信用等人生各階段金融需求皆可在平台上滿足，開創傳統銀行之外的另一個新選擇。\n立即前往 >> http://tfe.tw';
           } else if (msg.indexOf('我要') != -1 ) {
-            replyMsg = '要你個大頭啦～\n\n請輸入關鍵字，建議用單詞來進行搜尋，例如：開標、信用額度等等';
+            replyMsg = '[0x1000A6]要你個大頭啦～\n\n請輸入關鍵字，建議用單詞來進行搜尋，例如：開標、信用額度等等';
           } else if (msg.indexOf('我想') != -1 ) {
-            replyMsg = '想你鬼啦～\n\n請輸入關鍵字，建議用單詞來進行搜尋，例如：開標、信用額度等等';
+            replyMsg = '[0x1000A6]想你鬼啦～\n\n請輸入關鍵字，建議用單詞來進行搜尋，例如：開標、信用額度等等';
           } else if (array) {
             // console.log('array: '+array.length);
             for (var i = 0; i < array.length; i++) {
               newArray[i] = ' '+array[i].topic+' '+rUrl+array[i].topic+'\n\n';
             }
-            replyMsg = '你要找的關鍵字為 " '+msg+' "...\n去中心化AI機器人比對的結果，推薦給您：\n\n'+newArray;
+            replyMsg = '[0x1000A5]你要找的關鍵字為 " '+msg+' "...\n去中心化AI機器人[0x1000A4]比對的結果，推薦給您：\n\n'+newArray;
           } else {
-            newArray = '拍謝厚！這API只能精準搜尋，不支持模糊比對 (╯‵□′)╯︵┴─┴\n建議用單詞來進行搜尋，例如：開標、信用額度等等...\n\n我知道很爛啦，就別嫌了XDD';
+            newArray = '拍謝厚~ 這API只能精準搜尋[0x10007C]不支持模糊比對[0x10007C]\n建議用單詞來進行搜尋，例如：開標、信用額度等等...\n\n我知道很爛啦，就別嫌了[0x100019]';
             replyMsg = newArray;
           }
 
