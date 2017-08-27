@@ -26,14 +26,6 @@ var server = app.listen(process.env.PORT || 8080, function() {
 // _getJSON();
 number();
 
-bot.on('message', function(event) {
-  event.reply(replyMsg).then(function(data) {
-    console.log(replyMsg);
-  }).catch(function(error) {
-    console.log('error');
-  });
-});
-
 // setTimeout(function() {
 //     var userId = event.message.id;
 //     var sendMsg = '要發送的文字';
@@ -42,7 +34,7 @@ bot.on('message', function(event) {
 // }, 5000);
 
 function number() {
-  // bot.on('message', function(event) {
+  bot.on('message', function(event) {
     var replyMsg = '';
     if (event.message.type = 'text') {
       var msg = event.message.text;
@@ -89,10 +81,15 @@ function number() {
         // There was a connection error of some sort
         replyMsg = '親～連線好像有點問題，請稍後再試！';
       };
-    } else {
-      replyMsg = '親～機器人無法辨識這種東西唷！';
+
+      event.reply(replyMsg).then(function(data) {
+        console.log(replyMsg);
+      }).catch(function(error) {
+        console.log('error');
+      });
+      
     }
-  // });
+  });
 }
 
 
