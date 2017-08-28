@@ -87,8 +87,8 @@ function number() {
                       },
                       {
                         "type": "message",
-                        "label": "怎麼投資賺錢？",
-                        "text": "收益"
+                        "label": "參加前注意事項！",
+                        "text": "2"
                       }
                   ]
                 }
@@ -107,13 +107,18 @@ function number() {
             "actions": [
                 {
                   "type": "message",
-                  "label": "什麼是信用額度？",
+                  "label": "參加資格？",
                   "text": "信用額度"
                 },
                 {
-                  "type": "uri",
-                  "label": "加入會員",
-                  "uri": "https://www.taiwanfundexchange.com.tw/TFEFrontend/register?utm_source=linebot&utm_campaign=linebot&utm_medium=carousel"
+                  "type": "message",
+                  "label": "如何參加競標組合？",
+                  "text": "如何參加競標組合"
+                },
+                {
+                  "type": "message",
+                  "label": "如何選擇競標組合？",
+                  "text": "如何選擇競標組合"
                 }
             ]
         }
