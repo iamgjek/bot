@@ -44,51 +44,41 @@ function number() {
       var tmp_carousel = 
       {
         "type": "template",
-        "altText": "this is a carousel template",
+        "altText": "主畫面",
         "template": {
             "type": "carousel",
             "columns": [
                 {
-                  "thumbnailImageUrl": "https://example.com/bot/images/item1.jpg",
-                  "title": "this is menu",
-                  "text": "description",
+                  "thumbnailImageUrl": "https://tfe-production.s3.amazonaws.com/image/Adve/%E5%BD%A2%E8%B1%A1%E5%8D…XSFMOYCFAFBQ&Expires=1815903260&Signature=ZnJQqOLAfFCqeu2Pm3HuS%2BsuBp0%3D",
+                  "title": "TFE去中心化AI機器人",
+                  "text": "標會型P2P借貸！大幅改良流傳千年的民間「標會」機制，使用者在平台可以自主決定借款利率，解決了當今網路金融直接存借的問題。除此之外，使用者投資，建立信用等人生各階段金融需求皆可在平台上滿足，開創傳統銀行之外的另一個新選擇。",
                   "actions": [
+                      // {
+                      //     "type": "postback",
+                      //     "label": "Buy",
+                      //     "data": "action=buy&itemid=111"
+                      // },
                       {
-                          "type": "postback",
-                          "label": "Buy",
-                          "data": "action=buy&itemid=111"
-                      },
-                      {
-                          "type": "postback",
-                          "label": "Add to cart",
-                          "data": "action=add&itemid=111"
+                          "type": "uri",
+                          "label": "投資3步驟",
+                          "uri": "https://www.taiwanfundexchange.com.tw/TFEFrontend/resource/edm/newbie/investor.html"
                       },
                       {
                           "type": "uri",
-                          "label": "View detail",
-                          "uri": "http://example.com/page/111"
+                          "label": "加入會員",
+                          "uri": "https://www.taiwanfundexchange.com.tw/TFEFrontend/register?utm_source=linebot&utm_campaign=linebot&utm_medium=carousel"
                       }
                   ]
                 },
                 {
-                  "thumbnailImageUrl": "https://example.com/bot/images/item2.jpg",
+                  "thumbnailImageUrl": "https://tfe-production.s3.amazonaws.com/image/Adve/%E5%BD%A2%E8%B1%A1%E5%8D%80/20170126123113264.jpg?AWSAccessKeyId=AKIAIGW7XSFMOYCFAFBQ&Expires=1800937873&Signature=13F6tCCqxeZZyv4fVyTtV35pPbM%3D",
                   "title": "this is menu",
                   "text": "description",
                   "actions": [
                       {
                           "type": "postback",
-                          "label": "Buy",
-                          "data": "action=buy&itemid=222"
-                      },
-                      {
-                          "type": "postback",
-                          "label": "Add to cart",
-                          "data": "action=add&itemid=222"
-                      },
-                      {
-                          "type": "uri",
-                          "label": "View detail",
-                          "uri": "http://example.com/page/222"
+                          "label": "什麼是信用額度？",
+                          "data": "action=信用額度&itemid=101"
                       }
                   ]
                 }
@@ -98,28 +88,28 @@ function number() {
       var tmp_button = 
       {
         "type": "template",
-        "altText": "this is a buttons template",
+        "altText": "Call to action",
         "template": {
             "type": "buttons",
             "thumbnailImageUrl": "https://example.com/bot/images/image.jpg",
-            "title": "Menu",
+            "title": "Call to action",
             "text": "Please select",
             "actions": [
-                {
-                  "type": "postback",
-                  "label": "Buy",
-                  "data": "action=buy&itemid=123"
-                },
+                // {
+                //   "type": "postback",
+                //   "label": "Buy",
+                //   "data": "action=buy&itemid=123"
+                // },
                 {
                   "type": "postback",
                   "label": "Add to cart",
                   "data": "action=add&itemid=123"
                 },
-                {
-                  "type": "uri",
-                  "label": "View detail",
-                  "uri": "http://example.com/page/123"
-                }
+                // {
+                //   "type": "uri",
+                //   "label": "View detail",
+                //   "uri": "http://example.com/page/123"
+                // }
             ]
         }
       };
