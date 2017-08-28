@@ -55,13 +55,18 @@ function number() {
                   "actions": [
                       {
                         "type": "uri",
-                        "label": "投資3步驟",
+                        "label": "加入會員",
+                        "uri": "https://www.taiwanfundexchange.com.tw/TFEFrontend/register?utm_source=linebot&utm_campaign=linebot&utm_medium=carousel"
+                      },
+                      {
+                        "type": "uri",
+                        "label": "我要投資",
                         "uri": "https://www.taiwanfundexchange.com.tw/TFEFrontend/resource/edm/newbie/investor.html"
                       },
                       {
                         "type": "uri",
-                        "label": "加入會員",
-                        "uri": "https://www.taiwanfundexchange.com.tw/TFEFrontend/register?utm_source=linebot&utm_campaign=linebot&utm_medium=carousel"
+                        "label": "加入貸款",
+                        "uri": "https://www.taiwanfundexchange.com.tw/TFEFrontend/resource/edm/newbie/lender.html"
                       }
                   ]
                 },
@@ -71,9 +76,9 @@ function number() {
                   "text": "description",
                   "actions": [
                       {
-                        "type": "postback",
-                        "label": "什麼是信用額度？",
-                        "data": "action=信用額度&itemid=101"
+                        "type": "uri",
+                        "label": "貸款5步驟",
+                        "uri": "https://www.taiwanfundexchange.com.tw/TFEFrontend/resource/edm/newbie/lender.html"
                       },
                       {
                         "type": "uri",
@@ -96,14 +101,9 @@ function number() {
             "text": "Please select",
             "actions": [
                 {
-                  "type": "postback",
-                  "label": "Add to cart",
-                  "data": "action=add&itemid=123"
-                },
-                {
-                  "type": "uri",
-                  "label": "加入會員",
-                  "uri": "https://www.taiwanfundexchange.com.tw/TFEFrontend/register?utm_source=linebot&utm_campaign=linebot&utm_medium=carousel"
+                  "type": "text",
+                  "label": "什麼是信用額度？",
+                  "data": "信用額度"
                 }
             ]
         }
