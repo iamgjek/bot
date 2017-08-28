@@ -62,23 +62,23 @@ function number() {
                         "type": "uri",
                         "label": "貸款5步驟",
                         "uri": "https://www.taiwanfundexchange.com.tw/TFEFrontend/resource/edm/newbie/lender.html"
+                      },
+                      {
+                        "type": "uri",
+                        "label": "加入會員",
+                        "uri": "https://www.taiwanfundexchange.com.tw/TFEFrontend/register?utm_source=linebot&utm_campaign=linebot&utm_medium=carousel"
                       }
                   ]
                 },
                 {
                   "thumbnailImageUrl": "https://example.com/bot/images/image.jpg",
                   "title": "常見問題",
-                  "text": "description",
+                  "text": "精華區",
                   "actions": [
                       {
-                        "type": "postback",
+                        "type": "message",
                         "label": "什麼是信用額度？",
-                        "data": "action=信用額度&itemid=101"
-                      },
-                      {
-                        "type": "uri",
-                        "label": "加入會員",
-                        "uri": "https://www.taiwanfundexchange.com.tw/TFEFrontend/register?utm_source=linebot&utm_campaign=linebot&utm_medium=carousel"
+                        "text": "信用額度"
                       }
                   ]
                 }
@@ -93,12 +93,12 @@ function number() {
             "type": "buttons",
             "thumbnailImageUrl": "https://example.com/bot/images/image.jpg",
             "title": "Call to action",
-            "text": "Please select",
+            "text": "...",
             "actions": [
                 {
-                  "type": "postback",
-                  "label": "Add to cart",
-                  "data": "action=add&itemid=123"
+                  "type": "message",
+                  "label": "什麼是信用額度？",
+                  "text": "信用額度"
                 },
                 {
                   "type": "uri",
