@@ -62,11 +62,6 @@ function number() {
                         "type": "uri",
                         "label": "貸款5步驟",
                         "uri": "https://www.taiwanfundexchange.com.tw/TFEFrontend/resource/edm/newbie/lender.html"
-                      },
-                      {
-                        "type": "uri",
-                        "label": "加入會員",
-                        "uri": "https://www.taiwanfundexchange.com.tw/TFEFrontend/register?utm_source=linebot&utm_campaign=linebot&utm_medium=carousel"
                       }
                   ]
                 },
@@ -79,6 +74,11 @@ function number() {
                         "type": "message",
                         "label": "什麼是信用額度？",
                         "text": "信用額度"
+                      },
+                      {
+                        "type": "uri",
+                        "label": "加入會員",
+                        "uri": "https://www.taiwanfundexchange.com.tw/TFEFrontend/register?utm_source=linebot&utm_campaign=linebot&utm_medium=carousel"
                       }
                   ]
                 }
