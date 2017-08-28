@@ -53,16 +53,22 @@ function number() {
                   "title": "TFE去中心化AI機器人",
                   "text": "...",
                   "actions": [
-                      {
-                          "type": "uri",
-                          "label": "投資3步驟",
-                          "uri": "https://www.taiwanfundexchange.com.tw/TFEFrontend/resource/edm/newbie/investor.html"
-                      },
-                      {
-                          "type": "uri",
-                          "label": "加入會員",
-                          "uri": "https://www.taiwanfundexchange.com.tw/TFEFrontend/register?utm_source=linebot&utm_campaign=linebot&utm_medium=carousel"
-                      }
+
+          {
+            "type": "postback",
+            "label": "Buy",
+            "data": "action=buy&itemid=123"
+          },
+          {
+            "type": "postback",
+            "label": "Add to cart",
+            "data": "action=add&itemid=123"
+          },
+          {
+            "type": "uri",
+            "label": "View detail",
+            "uri": "http://example.com/page/123"
+          }
                   ]
                 },
                 {
