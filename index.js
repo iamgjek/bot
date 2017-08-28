@@ -62,12 +62,12 @@ function number() {
                         "type": "uri",
                         "label": "貸款5步驟",
                         "uri": "https://www.taiwanfundexchange.com.tw/TFEFrontend/resource/edm/newbie/lender.html"
-                      },
-                      {
-                        "type": "uri",
-                        "label": "加入會員",
-                        "uri": "https://www.taiwanfundexchange.com.tw/TFEFrontend/register?utm_source=linebot&utm_campaign=linebot&utm_medium=carousel"
                       }
+                      // {
+                      //   "type": "uri",
+                      //   "label": "加入會員",
+                      //   "uri": "https://www.taiwanfundexchange.com.tw/TFEFrontend/register?utm_source=linebot&utm_campaign=linebot&utm_medium=carousel"
+                      // }
                   ]
                 },
                 {
@@ -84,12 +84,12 @@ function number() {
                         "type": "message",
                         "label": "什麼是P2P網路借貸",
                         "text": "p2p"
-                      },
-                      {
-                        "type": "message",
-                        "label": "怎麼投資賺錢？",
-                        "text": "收益"
                       }
+                      // {
+                      //   "type": "message",
+                      //   "label": "怎麼投資賺錢？",
+                      //   "text": "收益"
+                      // }
                   ]
                 }
             ]
