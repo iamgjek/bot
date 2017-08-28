@@ -109,6 +109,11 @@ function number() {
                   "type": "postback",
                   "label": "Buy",
                   "data": "action=buy&itemid=222"
+                },
+                {
+                  "type": "uri",
+                  "label": "投資3步驟",
+                  "uri": "https://www.taiwanfundexchange.com.tw/TFEFrontend/resource/edm/newbie/investor.html"
                 }
             ]
         }
