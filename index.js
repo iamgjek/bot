@@ -119,21 +119,6 @@ function number() {
                   "type": "message",
                   "label": "如何選擇競標組合？",
                   "text": "如何選擇競標組合"
-                },
-                {
-                  "type": "message",
-                  "label": "我能看到競標組合內成員資訊嗎？",
-                  "text": "我能看到競標組合內成員資訊嗎"
-                },
-                {
-                  "type": "message",
-                  "label": "什麼是融資傾向指標？",
-                  "text": "什麼是融資傾向指標"
-                },
-                {
-                  "type": "message",
-                  "label": "什麼是組合信用評等？",
-                  "text": "什麼是組合信用評等"
                 }
             ]
         }
