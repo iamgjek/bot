@@ -49,7 +49,7 @@ function number() {
             "type": "carousel",
             "columns": [
                 {
-                  "thumbnailImageUrl": "https://tfe-production.s3.amazonaws.com/image/Adve/%E5%BD%A2%E8%B1%A1%E5%8D…XSFMOYCFAFBQ&Expires=1815903260&Signature=ZnJQqOLAfFCqeu2Pm3HuS%2BsuBp0%3D",
+                  "thumbnailImageUrl": "https://www.taiwanfundexchange.com.tw/TFEFrontend/resource/edm/lineat/images/800_03.jpg",
                   "title": "TFE去中心化AI機器人",
                   "text": "標會型P2P借貸！大幅改良流傳千年的民間「標會」機制，使用者在平台可以自主決定借款利率，解決了當今網路金融直接存借的問題。除此之外，使用者投資，建立信用等人生各階段金融需求皆可在平台上滿足，開創傳統銀行之外的另一個新選擇。",
                   "actions": [
@@ -71,7 +71,7 @@ function number() {
                   ]
                 },
                 {
-                  "thumbnailImageUrl": "https://tfe-production.s3.amazonaws.com/image/Adve/%E5%BD%A2%E8%B1%A1%E5%8D%80/20170126123113264.jpg?AWSAccessKeyId=AKIAIGW7XSFMOYCFAFBQ&Expires=1800937873&Signature=13F6tCCqxeZZyv4fVyTtV35pPbM%3D",
+                  "thumbnailImageUrl": "http://www.taiwanfundexchange.com.tw/TFEFrontend/resource/assets/images/fb_title_image.jpg",
                   "title": "this is menu",
                   "text": "description",
                   "actions": [
