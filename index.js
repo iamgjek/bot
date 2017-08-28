@@ -149,7 +149,7 @@ function number() {
           } else if (array) {
             // console.log('array: '+array.length);
             for (var i = 0; i < array.length; i++) {
-              newArray[i] = ' '+array[i].topic+' '+rUrl+array[i].topic+'\n\n';
+              newArray[i] = ' '+array[i].topic+' '+rUrl+array[i].topic+'\n';
             }
             replyMsg = '你要找的關鍵字為 " '+msg+' "...\n去中心化AI機器人比對的結果，推薦給您：\n\n'+newArray;
           } else {
