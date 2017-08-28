@@ -51,13 +51,8 @@ function number() {
                 {
                   "thumbnailImageUrl": "https://example.com/bot/images/image.jpg",
                   "title": "TFE去中心化AI機器人",
-                  "text": "標會型P2P借貸！大幅改良流傳千年的民間「標會」機制，使用者在平台可以自主決定借款利率，解決了當今網路金融直接存借的問題。除此之外，使用者投資，建立信用等人生各階段金融需求皆可在平台上滿足，開創傳統銀行之外的另一個新選擇。",
+                  "text": "...",
                   "actions": [
-                      // {
-                      //     "type": "postback",
-                      //     "label": "Buy",
-                      //     "data": "action=buy&itemid=111"
-                      // },
                       {
                           "type": "uri",
                           "label": "投資3步驟",
@@ -95,21 +90,11 @@ function number() {
             "title": "Call to action",
             "text": "Please select",
             "actions": [
-                // {
-                //   "type": "postback",
-                //   "label": "Buy",
-                //   "data": "action=buy&itemid=123"
-                // },
                 {
                   "type": "postback",
                   "label": "Add to cart",
                   "data": "action=add&itemid=123"
                 }
-                // {
-                //   "type": "uri",
-                //   "label": "View detail",
-                //   "uri": "http://example.com/page/123"
-                // }
             ]
         }
       };
