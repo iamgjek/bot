@@ -49,7 +49,7 @@ function number() {
             "type": "carousel",
             "columns": [
                 {
-                  "thumbnailImageUrl": "http://cfile21.uf.tistory.com/image/2175CE4F5457397F1F241F",
+                  "thumbnailImageUrl": "https://example.com/bot/images/image.jpg",
                   "title": "TFE去中心化AI機器人",
                   "text": "...",
                   "actions": [
@@ -62,6 +62,11 @@ function number() {
                         "type": "uri",
                         "label": "貸款5步驟",
                         "uri": "https://www.taiwanfundexchange.com.tw/TFEFrontend/resource/edm/newbie/lender.html"
+                      },
+                      {
+                        "type": "uri",
+                        "label": "加入會員",
+                        "uri": "https://www.taiwanfundexchange.com.tw/TFEFrontend/register?utm_source=linebot&utm_campaign=linebot&utm_medium=carousel"
                       }
                   ]
                 },
@@ -76,9 +81,14 @@ function number() {
                         "text": "信用額度"
                       },
                       {
-                        "type": "uri",
-                        "label": "加入會員",
-                        "uri": "https://www.taiwanfundexchange.com.tw/TFEFrontend/register?utm_source=linebot&utm_campaign=linebot&utm_medium=carousel"
+                        "type": "message",
+                        "label": "什麼是P2P網路借貸？",
+                        "text": "p2p"
+                      },
+                      {
+                        "type": "message",
+                        "label": "怎麼投資賺錢？",
+                        "text": "收益"
                       }
                   ]
                 }
