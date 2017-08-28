@@ -49,7 +49,7 @@ function number() {
             "type": "carousel",
             "columns": [
                 {
-                  "thumbnailImageUrl": "https://example.com/bot/images/image.jpg",
+                  "thumbnailImageUrl": "http://blog.taiwanfundexchange.com.tw/wp-content/uploads/2016/05/Internet-of-things.png",
                   "title": "TFE去中心化AI機器人",
                   "text": "...",
                   "actions": [
@@ -74,6 +74,11 @@ function number() {
                         "type": "message",
                         "label": "什麼是信用額度？",
                         "text": "信用額度"
+                      },
+                      {
+                        "type": "message",
+                        "label": "什麼是P2P網路借貸",
+                        "text": "p2p"
                       },
                       {
                         "type": "uri",
