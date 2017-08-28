@@ -49,24 +49,24 @@ function number() {
             "type": "carousel",
             "columns": [
                 {
-                  "thumbnailImageUrl": "http://www.taiwanfundexchange.com.tw/TFEFrontend/resource/assets/images/fb_title_image.jpg",
+                  "thumbnailImageUrl": "https://example.com/bot/images/image.jpg",
                   "title": "TFE去中心化AI機器人",
                   "text": "...",
                   "actions": [
                       {
                         "type": "uri",
-                        "label": "加入會員",
-                        "uri": "https://www.taiwanfundexchange.com.tw/TFEFrontend/register?utm_source=linebot&utm_campaign=linebot&utm_medium=carousel"
-                      },
-                      {
-                        "type": "uri",
-                        "label": "我要投資",
+                        "label": "投資3步驟",
                         "uri": "https://www.taiwanfundexchange.com.tw/TFEFrontend/resource/edm/newbie/investor.html"
                       },
                       {
                         "type": "uri",
-                        "label": "加入貸款",
+                        "label": "貸款5步驟",
                         "uri": "https://www.taiwanfundexchange.com.tw/TFEFrontend/resource/edm/newbie/lender.html"
+                      },
+                      {
+                        "type": "uri",
+                        "label": "加入會員",
+                        "uri": "https://www.taiwanfundexchange.com.tw/TFEFrontend/register?utm_source=linebot&utm_campaign=linebot&utm_medium=carousel"
                       }
                   ]
                 },
@@ -77,13 +77,8 @@ function number() {
                   "actions": [
                       {
                         "type": "postback",
-                        "label": "Buy",
-                        "data": "action=buy&itemid=222"
-                      },
-                      {
-                        "type": "uri",
-                        "label": "貸款5步驟",
-                        "uri": "https://www.taiwanfundexchange.com.tw/TFEFrontend/resource/edm/newbie/lender.html"
+                        "label": "什麼是信用額度？",
+                        "data": "action=信用額度&itemid=101"
                       },
                       {
                         "type": "uri",
@@ -107,13 +102,13 @@ function number() {
             "actions": [
                 {
                   "type": "postback",
-                  "label": "Buy",
-                  "data": "action=buy&itemid=222"
+                  "label": "Add to cart",
+                  "data": "action=add&itemid=123"
                 },
                 {
                   "type": "uri",
-                  "label": "投資3步驟",
-                  "uri": "https://www.taiwanfundexchange.com.tw/TFEFrontend/resource/edm/newbie/investor.html"
+                  "label": "加入會員",
+                  "uri": "https://www.taiwanfundexchange.com.tw/TFEFrontend/register?utm_source=linebot&utm_campaign=linebot&utm_medium=carousel"
                 }
             ]
         }
