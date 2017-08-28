@@ -76,6 +76,11 @@ function number() {
                   "text": "description",
                   "actions": [
                       {
+                        "type": "postback",
+                        "label": "Buy",
+                        "data": "action=buy&itemid=222"
+                      },
+                      {
                         "type": "uri",
                         "label": "貸款5步驟",
                         "uri": "https://www.taiwanfundexchange.com.tw/TFEFrontend/resource/edm/newbie/lender.html"
@@ -101,9 +106,9 @@ function number() {
             "text": "Please select",
             "actions": [
                 {
-                  "type": "message",
-                  "label": "什麼是信用額度？",
-                  "data": "信用額度"
+                  "type": "postback",
+                  "label": "Buy",
+                  "data": "action=buy&itemid=222"
                 }
             ]
         }
