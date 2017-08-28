@@ -76,9 +76,9 @@ function number() {
                         "text": "信用額度"
                       },
                       {
-                        "type": "message",
-                        "label": "什麼是P2P網路借貸",
-                        "text": "p2p"
+                        "type": "uri",
+                        "label": "加入會員",
+                        "uri": "https://www.taiwanfundexchange.com.tw/TFEFrontend/register?utm_source=linebot&utm_campaign=linebot&utm_medium=carousel"
                       }
                   ]
                 }
