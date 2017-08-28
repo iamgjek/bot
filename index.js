@@ -71,7 +71,7 @@ function number() {
                   ]
                 },
                 {
-                  "thumbnailImageUrl": "http://blog.taiwanfundexchange.com.tw/wp-content/uploads/2016/05/Internet-of-things.png",
+                  "thumbnailImageUrl": "https://example.com/bot/images/image.jpg",
                   "title": "常見問題",
                   "text": "精華區",
                   "actions": [
