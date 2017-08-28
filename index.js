@@ -49,7 +49,7 @@ function number() {
             "type": "carousel",
             "columns": [
                 {
-                  "thumbnailImageUrl": "http://blog.taiwanfundexchange.com.tw/wp-content/uploads/2016/05/Internet-of-things.png",
+                  "thumbnailImageUrl": "http://cfile21.uf.tistory.com/image/2175CE4F5457397F1F241F",
                   "title": "TFE去中心化AI機器人",
                   "text": "...",
                   "actions": [
@@ -62,11 +62,16 @@ function number() {
                         "type": "uri",
                         "label": "貸款5步驟",
                         "uri": "https://www.taiwanfundexchange.com.tw/TFEFrontend/resource/edm/newbie/lender.html"
+                      },
+                      {
+                        "type": "uri",
+                        "label": "加入會員",
+                        "uri": "https://www.taiwanfundexchange.com.tw/TFEFrontend/register?utm_source=linebot&utm_campaign=linebot&utm_medium=carousel"
                       }
                   ]
                 },
                 {
-                  "thumbnailImageUrl": "https://example.com/bot/images/image.jpg",
+                  "thumbnailImageUrl": "http://blog.taiwanfundexchange.com.tw/wp-content/uploads/2016/05/Internet-of-things.png",
                   "title": "常見問題",
                   "text": "精華區",
                   "actions": [
@@ -81,9 +86,9 @@ function number() {
                         "text": "p2p"
                       },
                       {
-                        "type": "uri",
-                        "label": "加入會員",
-                        "uri": "https://www.taiwanfundexchange.com.tw/TFEFrontend/register?utm_source=linebot&utm_campaign=linebot&utm_medium=carousel"
+                        "type": "message",
+                        "label": "怎麼投資賺錢？",
+                        "text": "收益"
                       }
                   ]
                 }
