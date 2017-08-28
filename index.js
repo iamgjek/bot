@@ -49,7 +49,7 @@ function number() {
             "type": "carousel",
             "columns": [
                 {
-                  "thumbnailImageUrl": "https://example.com/bot/images/image.jpg",
+                  "thumbnailImageUrl": "http://www.taiwanfundexchange.com.tw/TFEFrontend/resource/assets/images/fb_title_image.jpg",
                   "title": "TFE去中心化AI機器人",
                   "text": "...",
                   "actions": [
@@ -101,7 +101,7 @@ function number() {
             "text": "Please select",
             "actions": [
                 {
-                  "type": "text",
+                  "type": "message",
                   "label": "什麼是信用額度？",
                   "data": "信用額度"
                 }
